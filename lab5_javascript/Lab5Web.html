@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Form</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        form p > label {
+            display: inline-block;
+            width: 130px;
+        }
+
+        form input [type="text"],form textarea{
+            border: 1px solid #faf8f1;
+        }
+
+        form input[type="submit"] {
+            border: 1px solid #95b4cc;
+            background-color: #2a5b7f;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+
+        form fieldset{
+            margin-left: 5px;
+            margin-right: 5px;
+            border: 10px solid #b55163;
+            background-color: #dccbed;
+        }
+
+        form legend{
+            margin-left: 20px;
+            color: #2a5b7f;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        form label {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            background-color: #9dc183;
+            text-align: center;
+            padding: 12px 0 40px;
+            margin-top: 25px;
+        }
+        
+        footer .socials_media {
+            padding: 1px 0;
+        }
+        
+        footer .socials_media a {
+            color: #b55163;
+            display: inline-block;
+            margin: 16px;
+        }
+        
+        footer .socials_media a:hover,
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        footer .socials_media a::after {
+            content: '';
+            display: block;
+            padding-bottom: 4px;
+            border-bottom: 1.2px solid #2a5b7f;
+            transform: scaleX(0);
+            transition: 0.2s linear;
+        }
+        
+        footer .socials_media a:hover::after {
+            transform: scaleX(0.5);
+        }
+        
+        footer .credit {
+            font-size: 12px;
+        }
+        
+        footer .credit a {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        footer .credit p {
+            color: #2a5b7f;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <form action="proses.php" method="post">
+        <fieldset>
+             <legend>Biodata Diri</legend>
+            <p>
+                <label for="nama">Nama  :</label>
+                <input type="text" id="nama" name="nama">
+            </p>
+            <p>
+                <label>Umur :</label>
+                <input type="number" min="1" max="100" name="umur">
+            </p>
+            <P>
+                <label>Tanggal Lahir :</label>
+                <input type="date" name="date">
+            </P>
+            <p>
+                <label>E-Mail</label>
+                <input type="email" name="email">
+            </p>
+            <p>
+                <label for="alamat">Alamat :</label>
+                <textarea type="text" name="nama" cols="25" rows="3"></textarea>
+            </p>
+            <p>
+                <label>Jenis Kelamin :</label>
+                <input id="jk_1" type="radio" name="kelamin" value="L"/>
+                <label for="jk_1">Laki-laki</label>
+                <input id="jk_p" type="radio" name="kelamin" value="P"/>
+                <label for="jk_p">Perempuan</label>        
+            </p>
+            <p><input type="submit" value="Kirim"></p>
+        </fieldset>
+    </form>
+    <footer>
+        <div id="socials_media" class="socials_media">
+            <a href="#" class="contact-link" data-contact="instagram"><i data-feather="instagram"></i></a>
+            <a href="#" class="contact-link" data-contact="email"><i data-feather="mail"></i></a>
+            <a href="#" class="contact-link" data-contact="linkedin"><i data-feather="linkedin"></i></a>
+            <a href="https://github.com/AnggitaRisqiNC" class="contact-link" data-contact="github"><i data-feather="github"></i></a>
+        </div>
+        <div class="credit">
+            <p>Created by <a href="">Anggita Risqi N</a> | &copy; 2023</p>
+        </div>
+    </footer>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>
